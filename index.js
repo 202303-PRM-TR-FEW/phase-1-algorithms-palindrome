@@ -1,19 +1,14 @@
 function isPalindrome(word) {
   // Write your algorithm here
   let newString = ''
-  let result = null
   for(let i = word.length-1; i >= 0 ; i--){
     newString += word[i]
   }
   console.log(newString)
-  if(newString === word){
-   return  true
-  }else{
-   return  false
-  }
+  return newString === word
   
 }
-// isPalindrome('wsim')
+
 /* 
   Add your pseudocode here
 
@@ -34,12 +29,22 @@ function isPalindrome(word) {
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
+  console.log("=>", isPalindrome("dad"));
+
+  console.log("");
+
+  console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
   console.log("");
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
+  console.log("");
+
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("name"));
 }
 
 module.exports = isPalindrome;
