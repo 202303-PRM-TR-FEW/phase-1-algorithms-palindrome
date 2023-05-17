@@ -1,9 +1,29 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let newString = ''
+  let result = null
+  for(let i = word.length-1; i >= 0 ; i--){
+    newString += word[i]
+  }
+  console.log(newString)
+  if(newString === word){
+   return  true
+  }else{
+   return  false
+  }
+  
 }
-
+// isPalindrome('wsim')
 /* 
   Add your pseudocode here
+
+  create an empty string named newString
+
+  loop on each letter in the word starting from the last letter 
+  and push it to newString
+  
+  
+  check if the newString and the wird are the same 
 */
 
 /*
